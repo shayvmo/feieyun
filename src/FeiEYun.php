@@ -1,6 +1,6 @@
 <?php
 /**
- * FeiEYun
+ * FeiEYun.
  *
  * @ClassName FeiEYun
  * @Author shayvmo
@@ -9,9 +9,7 @@
  * @Description
  */
 
-
 namespace Shayvmo\Feieyun;
-
 
 use GuzzleHttp\Exception\GuzzleException;
 use Shayvmo\Feieyun\Apis\ApiInterface;
@@ -22,10 +20,10 @@ use Shayvmo\Feieyun\Exceptions\InvalidArgumentException;
 
 class FeiEYun
 {
-    /** @var string  */
+    /** @var string */
     protected $username;
 
-    /** @var string  */
+    /** @var string */
     protected $u_key;
 
     /** @var string */
@@ -51,12 +49,14 @@ class FeiEYun
     public function setGuzzleOptions(array $options): FeiEYun
     {
         $this->guzzle_options = $options;
+
         return $this;
     }
 
     public function setApiName(string $api_name)
     {
         $this->api_name = $api_name;
+
         return $this;
     }
 
@@ -83,11 +83,10 @@ class FeiEYun
 
         try {
             $response = $this->getHttpClient()->post($this->request_url, [
-                'form_params' => $params
+                'form_params' => $params,
             ])->getBody()->getContents();
 
             return json_decode($response, true);
-
         } catch (GuzzleException $e) {
             throw new Exception('request fail: '.$e->getMessage());
         } catch (\Exception $exception) {
@@ -98,12 +97,14 @@ class FeiEYun
     public function setStime(int $time): FeiEYun
     {
         $this->stime = $time;
+
         return $this;
     }
 
     private function getStime(): string
     {
-        !$this->stime && $this->stime = (string)time();
+        !$this->stime && $this->stime = (string) time();
+
         return $this->stime;
     }
 
@@ -112,7 +113,7 @@ class FeiEYun
         return sha1($this->username.$this->u_key.$this->stime);
     }
 
-    public function __call($name,$arguments)
+    public function __call($name, $arguments)
     {
         $class_name = __NAMESPACE__.'\\Apis\\'.ucfirst($name);
         if (!class_exists($class_name)) {
@@ -123,6 +124,4 @@ class FeiEYun
 
         return $this->setApiName($api_interface->getApiName())->request(...$arguments);
     }
-
-
 }

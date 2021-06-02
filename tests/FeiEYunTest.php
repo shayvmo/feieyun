@@ -1,6 +1,6 @@
 <?php
 /**
- * FeiEYun
+ * FeiEYun.
  *
  * @ClassName FeiEYunTest
  * @Author Administrator
@@ -8,7 +8,6 @@
  * @Version 1.0
  * @Description
  */
-
 
 namespace Shayvmo\Feieyun\Tests;
 
@@ -39,7 +38,7 @@ class FeiEYunTest extends \PHPUnit\Framework\TestCase
                 'stime' => $time,
                 'sig' => sha1($username.$u_key.$time),
                 'apiname' => $api_name,
-            ]
+            ],
         ])->andReturn($response);
 
         $feieyun = \Mockery::mock(FeiEYun::class, [$username, $u_key])->makePartial();

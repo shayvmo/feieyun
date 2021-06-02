@@ -1,6 +1,6 @@
 <?php
 /**
- * FeiEYun
+ * FeiEYun.
  *
  * @ClassName CheckPrinterStatus
  * @Author shayvmo
@@ -9,9 +9,7 @@
  * @Description
  */
 
-
 namespace Shayvmo\Feieyun\Apis;
-
 
 class CheckPrinterStatus implements ApiInterface
 {
