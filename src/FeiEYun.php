@@ -11,10 +11,8 @@
 
 namespace Shayvmo\Feieyun;
 
-use GuzzleHttp\Exception\GuzzleException;
 use Shayvmo\Feieyun\Apis\ApiInterface;
 use Shayvmo\Feieyun\Exceptions\ClassNotFoundException;
-use Shayvmo\Feieyun\Exceptions\Exception;
 use Shayvmo\Feieyun\Exceptions\HttpException;
 use Shayvmo\Feieyun\Exceptions\InvalidArgumentException;
 
@@ -87,8 +85,6 @@ class FeiEYun
             ])->getBody()->getContents();
 
             return json_decode($response, true);
-        } catch (GuzzleException $e) {
-            throw new Exception('request fail: '.$e->getMessage());
         } catch (\Exception $exception) {
             throw new HttpException($exception->getMessage(), $exception->getCode(), $exception);
         }
