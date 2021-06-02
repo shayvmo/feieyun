@@ -1,6 +1,6 @@
 <?php
 /**
- * FeiEYun
+ * FeiEYun.
  *
  * @ClassName ClearPrinterSqs
  * @Author shayvmo
@@ -9,13 +9,10 @@
  * @Description
  */
 
-
 namespace Shayvmo\Feieyun\Apis;
-
 
 class ClearPrinterSqs implements ApiInterface
 {
-
     public function getApiName(): string
     {
         return 'Open_delPrinterSqs';

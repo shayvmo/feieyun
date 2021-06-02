@@ -1,6 +1,6 @@
 <?php
 /**
- * FeiEYun
+ * FeiEYun.
  *
  * @ClassName ServiceProvider
  * @Author Administrator
@@ -9,9 +9,7 @@
  * @Description
  */
 
-
 namespace Shayvmo\Feieyun;
-
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -19,7 +17,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(FeiEYun::class, function(){
+        $this->app->singleton(FeiEYun::class, function () {
             return new FeiEYun(config('services.feieyun.username'), config('services.feieyun.ukey'));
         });
 

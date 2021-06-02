@@ -1,6 +1,6 @@
 <?php
 /**
- * FeiEYun
+ * FeiEYun.
  *
  * @ClassName ClassNotFoundException
  * @Author shayvmo
@@ -9,11 +9,8 @@
  * @Description
  */
 
-
 namespace Shayvmo\Feieyun\Exceptions;
-
 
 class ClassNotFoundException extends Exception
 {
-
 }
