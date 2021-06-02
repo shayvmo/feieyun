@@ -42,8 +42,20 @@ $response_data = $feieyun->checkPrinterStatus($private_params);
 
 支持 laravel 5.5 以上
 
+#### 在 Laravel 使用
+
+`config/services.php` 中配置以下
+
+```
+'feieyun' => [
+    'username' => '',
+    'ukey' => '',
+],
 ```
 
+方法参数注入
+
+```php
 use Shayvmo\Feieyun\FeiEYun;
 
 class FeiEYunController extends Controller
@@ -51,6 +63,18 @@ class FeiEYunController extends Controller
     public function show(FeiEYun $feiEYun)
     {
         return response()->json($feiEYun->checkPrinterStatus(['sn'=>'xxx']));
+    }
+}
+```
+
+服务名访问
+
+```php
+class FeiEYunController extends Controller
+{
+    public function show()
+    {
+        return response()->json(app('feieyun')->checkPrinterStatus(['sn'=>'xxx']));
     }
 }
 ```
@@ -91,6 +115,9 @@ $response = $feieyun->checkPrinterStatus(['sn'=>'xxxxx']);
 
 查询打印机状态: `checkPrinterStatus`
 
+## 参考
+
+[飞鹅云开放平台](http://help.feieyun.com/document.php)
 
 ## 贡献代码
 
