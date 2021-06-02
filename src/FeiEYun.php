@@ -114,9 +114,9 @@ class FeiEYun
 
     public function __call($name,$arguments)
     {
-        $class_name = __NAMESPACE__.'\\'.ucfirst($name);
+        $class_name = __NAMESPACE__.'\\Apis\\'.ucfirst($name);
         if (!class_exists($class_name)) {
-            throw new ClassNotFoundException('api class not found');
+            throw new ClassNotFoundException($class_name.' api class not found');
         }
         /** @var ApiInterface $api_interface */
         $api_interface = new $class_name();

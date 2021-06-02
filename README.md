@@ -38,6 +38,23 @@ $response_data = $feieyun->setApiName('Open_queryPrinterStatus')->request($priva
 $response_data = $feieyun->checkPrinterStatus($private_params);
 ```
 
+### Laravel
+
+支持 laravel 5.5 以上
+
+```
+
+use Shayvmo\Feieyun\FeiEYun;
+
+class FeiEYunController extends Controller
+{
+    public function show(FeiEYun $feiEYun)
+    {
+        return response()->json($feiEYun->checkPrinterStatus(['sn'=>'xxx']));
+    }
+}
+```
+
 ### 查询打印机状态
 
 ```php
