@@ -12,6 +12,10 @@
 基于 [飞鹅云开放平台](http://help.feieyun.com/document.php) 的 PHP 接口组件
 
 
+github地址：[https://github.com/shayvmo/feieyun](https://github.com/shayvmo/feieyun)
+
+码云地址：[https://gitee.com/shayvmo/feieyun](https://gitee.com/shayvmo/feieyun)
+
 ## 安装
 
 ```shell
