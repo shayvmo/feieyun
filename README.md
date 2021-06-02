@@ -3,6 +3,7 @@
 <p align="center"> 飞鹅打印机</p>
 
 [![Build Status](https://travis-ci.org/shayvmo/feieyun.svg?branch=main)](https://travis-ci.org/shayvmo/feieyun)
+[![StyleCI](https://github.styleci.io/repos/373069835/shield?branch=main)](https://github.styleci.io/repos/373069835?branch=main)
 
 ## FeiEYun
 
