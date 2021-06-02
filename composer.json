@@ -1,0 +1,29 @@
+{
+    "name": "shayvmo/feieyun",
+    "description": "FeiEYun printer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shayvmo",
+            "email": "1006897172@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shayvmo\\Feieyun\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shayvmo\\Feieyun\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.4"
+    }
+}
