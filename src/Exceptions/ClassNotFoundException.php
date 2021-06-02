@@ -1,12 +1,12 @@
 <?php
-/**
- * FeiEYun.
+
+/*
+ * This file is part of the shaymo/feieyun.
  *
- * @ClassName ClassNotFoundException
- * @Author shayvmo
- * @Date 2021-06-01 22:45 星期二
- * @Version 1.0
- * @Description
+ *  (c) shayvmo <1006897172@qq.com>
+ *
+ *  This source file is subject to the MIT license that is bundled
+ *  with this source code in the file LICENSE.
  */
 
 namespace Shayvmo\Feieyun\Exceptions;
