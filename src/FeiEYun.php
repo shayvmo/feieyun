@@ -16,6 +16,17 @@ use Shayvmo\Feieyun\Exceptions\ClassNotFoundException;
 use Shayvmo\Feieyun\Exceptions\HttpException;
 use Shayvmo\Feieyun\Exceptions\InvalidArgumentException;
 
+/**
+ * @method void AddPrinter(array $params)
+ * @method void CheckPrinterStatus(array $params)
+ * @method void ClearPrinterSqs(array $params)
+ * @method void CreatePrintLabelOrder(array $params)
+ * @method void CreatePrintOrder(array $params)
+ * @method void DelPrinter(array $params)
+ * @method void ModifyPrinter(array $params)
+ * @method void QueryOrderInfoByDate(array $params)
+ * @method void QueryOrderState(array $params)
+ */
 class FeiEYun
 {
     /** @var string */
