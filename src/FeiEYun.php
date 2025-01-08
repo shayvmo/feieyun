@@ -17,15 +17,15 @@ use Shayvmo\Feieyun\Exceptions\HttpException;
 use Shayvmo\Feieyun\Exceptions\InvalidArgumentException;
 
 /**
- * @method void AddPrinter(array $params)
- * @method void CheckPrinterStatus(array $params)
- * @method void ClearPrinterSqs(array $params)
- * @method void CreatePrintLabelOrder(array $params)
- * @method void CreatePrintOrder(array $params)
- * @method void DelPrinter(array $params)
- * @method void ModifyPrinter(array $params)
- * @method void QueryOrderInfoByDate(array $params)
- * @method void QueryOrderState(array $params)
+ * @method array AddPrinter(array $params)
+ * @method array CheckPrinterStatus(array $params)
+ * @method array ClearPrinterSqs(array $params)
+ * @method array CreatePrintLabelOrder(array $params)
+ * @method array CreatePrintOrder(array $params)
+ * @method array DelPrinter(array $params)
+ * @method array ModifyPrinter(array $params)
+ * @method array QueryOrderInfoByDate(array $params)
+ * @method array QueryOrderState(array $params)
  */
 class FeiEYun
 {
